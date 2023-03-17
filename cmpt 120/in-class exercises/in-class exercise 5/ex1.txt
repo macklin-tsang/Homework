@@ -1,0 +1,7 @@
+In line 29, the number 5 is used as the level parameter.
+
+When the number 5 is used within the function, it calculates the level but subtracted by 1.
+
+The level represents how many branches exist after the divergence of the main branch.
+
+Tree diagram with levels labelled:
