@@ -20,16 +20,26 @@ def totalCosts(flightPrice, hotelPrice, nights, age):
 def tripDetails(destination, flightPrice, hotelPrice, nights, age):
     None
 
-def password():
-        # This will select the first character of the user's name
-    password_first_character = str(name[0])
+def suggestTrip(music, beach, viennaPrice, baliPrice):
 
-    # This will select the last character
-    password_last_character = str(name[-1])
+    if bool(music) == True:
+        if bool(beach) == True:
+            return 'Bali'
+        if bool(beach) == False:
+            return 'Vienna'
+    if bool(music) == False:
+        if bool(beach) == True:
+            return 'Bali'
+        if bool(beach) == False:
+            return None
+        
+def createAccount():
 
-    # The variable will save the remainder of the age divided by 8
-    n = age % 8
+    answer = input("Do you want to create an account").lower.strip()
+    
+    if answer == 'yes':
+        password()
+    else:
+        None
 
-    # Create a variable and set it to the formula of the password.
-    password = password_last_character * int(n) + password_first_character + (random.randint(0, 5) * "!")
-    return password
+        
