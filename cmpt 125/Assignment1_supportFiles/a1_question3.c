@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include "a1_question3.h"
 
-int squareNumber(int number) {
+int squareNumber(int number) { // Helper function to square a given number
     return number * number;
 }
 
-double squareRoot(int number) {
+double squareRoot(int number) { // Helper function to quare root a given number
     return sqrt(number);
 }
 
 float printPointsDistances(unsigned int row, int points[][3], int point[]) {
 
-    double totalEuclideanDistance = 0;
+    double totalEuclideanDistance = 0; // Initialize the accumulator for our final answer
 
-    for (int i = 0; i < row; i++) {
+    for (int i = 0; i < row; i++) { // Iterate through each row
 
         int xDifference = points[i][0] - point[0];
         int xDifferenceSquared = squareNumber(xDifference);
