@@ -1,5 +1,5 @@
-# THIS IS ALL JUST HOMEWORK
+# ALL GLORY TO GOD
 
-That's about it
+3%. Never doubt yourself. 
 
-![alt text](https://pbs.twimg.com/media/CLCL6OKWgAI8VPH.jpg)
+![alt text](https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3138160.png)
