@@ -12,7 +12,7 @@ unsigned int shuffleDigits(unsigned int number){
         digitLength++;
     }
 
-    int digitArray[digitLength]; // initialize empty array
+    int digitArray[digitLength]; // Initialize empty array
 
     int tenthPowerNumber = powerOfTen(digitLength);
 
