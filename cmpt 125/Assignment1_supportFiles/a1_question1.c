@@ -6,7 +6,7 @@ unsigned int shuffleDigits(unsigned int number){
     int digitCounterNumber = number;
     int digitArrayNumber = number;
     int finalResult = 0;
-
+    // make a function to clip off trailing zeros
     while (digitCounterNumber > 0) { // Find out how many digits there are
         digitCounterNumber /= 10;
         digitLength++;
