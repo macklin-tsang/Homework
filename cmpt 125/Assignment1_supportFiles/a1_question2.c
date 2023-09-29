@@ -1,7 +1,17 @@
-#include <stdio.h>
+// Name: Macklin Tsang
+// Student Number: 301567122
+// Computing ID: mta149
+
+// Helped used for selection sort via GeeksForGeeks
+// https://www.geeksforgeeks.org/selection-sort/
+
+// Include header file for function declarations
 #include "a1_question2.h"
 
 void rangedSort(int array[], unsigned int size, int leftIndex, int rightIndex){
+
+    // Conditionals for right and left index
+    
     if (leftIndex > rightIndex){
         int placeholder = rightIndex;
         rightIndex = leftIndex;
@@ -12,14 +22,11 @@ void rangedSort(int array[], unsigned int size, int leftIndex, int rightIndex){
         leftIndex = 0;
     }
 
-    if (rightIndex >= size){
-        rightIndex = size-1;
+    if (rightIndex < 0 || rightIndex >= size){
+        rightIndex = size-1; // Array is 0-indexed, size-1 for rightmost index
     }
 
-    // printf("Sorting from index %d to %d\n", leftIndex, rightIndex);
-
-    // Selection Sort
-
+    // Selection Sort via GeeksForGeeks
     for (int i = leftIndex; i <= rightIndex; i++){
         int minimumIndex = i;
         for (int j = i + 1; j <= rightIndex; j++) {
@@ -27,18 +34,10 @@ void rangedSort(int array[], unsigned int size, int leftIndex, int rightIndex){
                 minimumIndex = j;
             }
         }
+        // Swap specified indices
         int placeholder = array[i];
         array[i] = array[minimumIndex];
         array[minimumIndex] = placeholder;
     }
-    
-    // printf("Final array: [");
-    // for (int i = 0; i < size; i++){
-    //     printf("%d", array[i]);
-    //     if (i < size - 1) {
-    //         printf(", ");
-    //     }
-    // }
-    // printf("]\n");
 
 }
