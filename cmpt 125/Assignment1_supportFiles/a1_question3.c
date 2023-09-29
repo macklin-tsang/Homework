@@ -1,19 +1,22 @@
-#include <stdio.h>
+// Name: Macklin Tsang
+// Student Number: 301567122
+// Computing ID: mta149
+
+// Program was written with help of CS Peer Tutor 
+
+// Include header file for function declarations
 #include "a1_question3.h"
 
-int squareNumber(int number) { // Helper function to square a given number
-    return number * number;
-}
-
-double squareRoot(int number) { // Helper function to quare root a given number
-    return sqrt(number);
-}
+// Initial declaration of helper function
+float squareNumber(int number); 
 
 float printPointsDistances(unsigned int row, int points[][3], int point[]) {
 
-    double totalEuclideanDistance = 0; // Initialize the accumulator for our final answer
+    // Initialize the accumulator for our final answer
+    float totalEuclideanDistance = 0; 
 
     for (int i = 0; i < row; i++) { // Iterate through each row
+        // Point Calculations per x, y, z
 
         int xDifference = points[i][0] - point[0];
         int xDifferenceSquared = squareNumber(xDifference);
@@ -24,14 +27,22 @@ float printPointsDistances(unsigned int row, int points[][3], int point[]) {
         int zDifference = points[i][2] - point[2];
         int zDifferenceSquared = squareNumber(zDifference);
         
-        double euclideanDistance = squareRoot(xDifferenceSquared + yDifferenceSquared + zDifferenceSquared);
+        float euclideanDistance = 
+        sqrt(xDifferenceSquared + yDifferenceSquared + zDifferenceSquared);
 
-        totalEuclideanDistance += euclideanDistance;
+        // Printing euclidean distances per row to 4 decimal places
+        printf("Euclidean distance from (%d, %d, %d) to (%d, %d, %d) is %.4f\n", 
+        points[i][0], points[i][1], points[i][2], point[0], point[1], point[2], 
+        euclideanDistance);
 
-        printf("Euclidean distance from (%d, %d, %d) to (%d, %d, %d) is %f\n", points[i][0],points[i][1],points[i][2], point[0], point[1], point[2], euclideanDistance);
+        // Accumulate euclideanDistance per row
+        totalEuclideanDistance += euclideanDistance; 
     }
 
-    printf("This is the totalEuclideanDistance: %f\n", totalEuclideanDistance);
-
     return totalEuclideanDistance;
+}
+
+// Helper function to square a given number
+float squareNumber(int number) { 
+    return number * number;
 }
